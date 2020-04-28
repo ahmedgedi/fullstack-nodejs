@@ -22,7 +22,7 @@ passport.use(
         callbackURL: '/auth/google/callback'
     }, 
     (accessToken, refreshToken, profile, done) => {
-        User.find({ googleID: profile.id })
+        User.findOne({ googleID: profile.id })
         .then((existingUser) => {
             if (existingUser) {
                 done(null, existingUser)
