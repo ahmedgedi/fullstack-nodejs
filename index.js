@@ -7,13 +7,13 @@ require('./models/User')
 require('./services/passport')
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-// mongoose.connect(keys.mongoURI)
+// mongoose.connect(keys.mongoURI) i just don't like seeing the deprecation warnings lol 
 
 const app = express()
 
 app.use(
     cookieSession({
-        maxAge: 30 * 24 * 60 * 60 * 1000, // this is saying we want our cookies to expire after 30 days
+        maxAge: 30 * 24 * 60 * 60 * 1000,
         keys: [keys.cookieKey]
     })
 )
