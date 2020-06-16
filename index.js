@@ -6,8 +6,7 @@ const keys = require('./config/keys')
 require('./models/User')
 require('./services/passport')
 
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-// mongoose.connect(keys.mongoURI) i just don't like seeing the deprecation warnings lol 
+mongoose.connect(keys.mongoURI)
 
 const app = express()
 
