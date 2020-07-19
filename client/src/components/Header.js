@@ -17,14 +17,14 @@ class Header extends Component {
     
     render() {
         return (
-            <nav>
+            <nav className="black">
                 <div className="nav-wrapper">
                 <Link 
                     to={this.props.auth ? '/surveys' : '/'} 
                     className="left brand-logo"
                     > 
                     Emaily 
-                    </Link>
+                </Link>
                 <ul id="nav-mobile" className="right hide-on-sm-and-down">
                     {this.renderContent()}
                 </ul>
