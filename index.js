@@ -25,9 +25,6 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
-    res.send({"hello":"world"})
-})
 
 require('./routes/authRoutes')(app)
 require('./routes/billingRoutes')(app)
